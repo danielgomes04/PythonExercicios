@@ -5,6 +5,18 @@ class Control:
         self.exer = Exercicios()#conectando com a classe exercicios
         self.opcao = -1
         self.num1 = 0
+        self.base = 0
+        self.altura = 0
+        self.dia = 0
+        self.mes = 0
+        self.anos = 0
+        self.total = 0
+        self.quantEleitor = 0
+        self.brancos = 0
+        self.nulos = 0
+        self.validos = 0
+        self.salario = 0
+        self.reajuste = 0
 
 
     def getOpcao(self):
@@ -17,11 +29,7 @@ class Control:
         return self.num1
 
     def setNum1(self, num1):
-        self.num1 = num1
-
-    def coletar(self):
-        print("Escolha um número:")
-        self.setNum1(self(input))
+        self.num = num1
 
 
     def menu(self):
@@ -38,14 +46,24 @@ class Control:
         self.setOpcao(int(input()))
 
     def operacao(self):
-        while (self.getOpcao() != 0):
+        while(self.getOpcao() != 0):
             self.menu()
             if self.getOpcao() == 0:
                 print("Obrigado.")
+                break
             elif self.getOpcao() == 1:
                 print(self.exer.exercicio1())
             elif self.getOpcao() == 2:
-                self.coletar()
-                print("Digite um número: {}".format(self.exer.exercicio2()))
+                print(self.exer.exercicio2(self.getNum1()))
+            elif self.getOpcao() == 3:
+                print(self.exer.exercicio3(self.base, self.altura))
+            elif self.getOpcao() == 4:
+                print(self.exer.exercicio4(self.anos, self.mes, self.dia, self.total))
+            elif self.getOpcao() == 5:
+                print(self.exer.exercicio5(self.quantEleitor, self.brancos, self.nulos, self.validos))
+            elif self.getOpcao() == 6:
+                print(self.exer.exercicio6(self.salario, self.reajuste))
+            elif self.getOpcao() == 7:
+                print(self.exer.exercicio7(self.))
 
 
