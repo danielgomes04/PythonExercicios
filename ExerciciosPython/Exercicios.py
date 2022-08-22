@@ -53,12 +53,33 @@ class Exercicios:
         reajuste = float(input())
         print("O novo salario é: ", reajuste / 100 * salario + salario)
 
-    def exercicio7(self, carro, distribuidor):
+    def exercicio7(self, carro, distribuidor, imposto, total):
         print("Informe o preço do carro: ")
         carro = float(input())
         distribuidor = 28 / 100
         imposto = 45 / 100
-        print 
+        total = (distribuidor + imposto) * carro + carro
+        print("O custo final ao consumidor é: ", total)
+
+    def exercicio8(self, nota1, nota2, nota3):
+        print("Informe a primeira nota: ")
+        nota1 = int(input())
+        print("Informe a segunda nota: ")
+        nota2 = int(input())
+        print("Informe a terceira nota: ")
+        nota3 = int(input())
+        print("A nota final é: ", (nota1 + nota2 + nota3) / 3)
+
+    def exercicio9(self, macas, macasMa, macasMe):
+        print("informe a quantidade de maças compradas: ")
+        macas = int(input())
+        if macas >= 12:
+            macasMa = 1 * macas
+        elif macas < 12:
+            macasMe = 1.30 * macas
+        print("O total é: ", macasMa or macasMe)
+
+
 
 
 

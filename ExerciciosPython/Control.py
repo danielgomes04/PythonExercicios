@@ -17,7 +17,15 @@ class Control:
         self.validos = 0
         self.salario = 0
         self.reajuste = 0
-
+        self.carro = 0
+        self.distribuidor = 0
+        self.imposto = 0
+        self.nota1 = 0
+        self.nota2 = 0
+        self.nota3 = 0
+        self.macas = 0
+        self.macasMa = 0
+        self.macasMe = 0
 
     def getOpcao(self):
         return self.opcao
@@ -64,6 +72,9 @@ class Control:
             elif self.getOpcao() == 6:
                 print(self.exer.exercicio6(self.salario, self.reajuste))
             elif self.getOpcao() == 7:
-                print(self.exer.exercicio7(self.))
-
+                print(self.exer.exercicio7(self.carro, self.distribuidor, self.imposto, self.total))
+            elif self.getOpcao() == 8:
+                print(self.exer.exercicio8(self.nota1, self.nota2, self.nota3))
+            elif self.getOpcao() == 9:
+                print(self.exer.exercicio9(self.macas, self.macasMa, self.macasMe))
 
